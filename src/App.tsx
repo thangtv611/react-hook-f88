@@ -2,6 +2,7 @@ import './styles.css';
 import Content from './Content';
 import { useState } from 'react';
 import Scenario1 from './scenarios/Scenario1';
+import Scenario2 from './scenarios/Scenario2';
 
 export default function App() {
     const [toggleView, setToggleView] = useState(true);
@@ -9,7 +10,7 @@ export default function App() {
     return (
         <div>
             <button onClick={() => setToggleView(!toggleView)}>Toggle</button>
-            {toggleView ? <Scenario1 /> : null}
+            {toggleView ? <Scenario2 /> : null}
         </div>
     );
 }
