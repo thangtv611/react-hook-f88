@@ -13,16 +13,12 @@ const Scenario1 = () => {
             console.log(resp.data[0]);
             setData(resp.data);
         });
-        return () => {
-            setData([]);
-        };
     }, [tab]);
 
     useEffect(() => {
         const handleScroll = () => {
             setShowGoTop(window.scrollY >= 200);
         };
-
         window.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -62,9 +58,6 @@ const Scenario1 = () => {
                         color: 'white',
                         background: 'green',
                         cursor: 'pointer'
-                    }}
-                    onClick={() => {
-                        window.scrollY = 0;
                     }}
                 >
                     Go top
